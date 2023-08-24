@@ -74,13 +74,6 @@ class Cfg:
         f.close()
 
 
-    # def removeKey(k):
-    #     with open(conf_json, 'r+') as f:
-    #         json_data = json.load(f)
-    #
-    #     f.close()
-
-
 class Backend(QObject):
 
     updated = pyqtSignal(str, arguments=['time'])
@@ -205,9 +198,6 @@ if __name__ == '__main__':
 
         f.close()
 
-
-
-
     with open(conf_json, "r") as f:
         try:
             conf_data = json.load(f)
@@ -241,15 +231,5 @@ if __name__ == '__main__':
     except JSONDecodeError as jdcerr:
         print(jdcerr)
         pass
-    # backend.load_config()
-
-
-
-
-
-
-# Connect your cleanup function to signal.SIGINT
-# And start a timer to call Application.event repeatedly.
-# You can change the timer parameter as you like.
 
 
